@@ -1,0 +1,186 @@
+/*Gjør sidene responsivei henhold til skjermstørrelsen */
+html {
+	font-size: calc(0.5em + 0.5vw)
+}
+
+body {
+	margin: 0px;
+	display: grid;
+	grid-template-columns: 10% 2fr 5fr 3.6fr;
+	grid-template-rows: 8em 6em 1fr 1fr 0.2fr 8em; 
+	grid-template-areas: "header header header header"
+						 "topbar topbar topbar topbar"
+						 "sidebar . main pictures"
+						 "sidebar . main pictures"
+						 "sidebar . vid ."
+						 "footer footer footer footer"
+}
+
+/* ============Top bar============ */
+nav {
+	grid-area: topbar;
+	background-color: #557A95;
+ 	display: block;
+ 	align-items: center;
+ 	text-align: center;
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	flex-wrap: wrap;
+}
+
+/*Lager mer mellomrom for linkene i top baren*/
+nav a {
+	background-color: #8a898e;
+	color: #020405;
+	padding: 7px 10px;
+	border-radius: 80px;
+	text-decoration: none;
+}
+
+/* Hover-farge på nav elementer ved hover*/
+nav a:hover{
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+
+/* Gjør så linkene ikke er klistra til toppen av nettstedet og legger til mellomrom*/
+.topbarlinks {
+	display: inline-block;
+    margin: 2% 2%
+}
+/* ============Top bar end============ */
+
+/* Gir Videoen på Video og Audio et navn og width*/
+section {
+	grid-area: vid;
+	margin: 4em 0 0 0;
+}
+
+video {
+	width: 100%;
+	border-radius: 10px;
+}
+/*Video end*/
+
+/* Bilder til høyre på siden*/
+div {
+	width: 70%;
+	grid-area: pictures;
+	display: flex;
+	flex-direction: column;
+	margin: 0 0 0 10px;
+}
+
+/* Endrer på bildestørrelsene */
+div img {
+	width: 100%;
+	height: auto;
+	max-height: 250px;
+	border-radius: 10px;
+	margin: 20px 0 0 20px;
+}
+
+div figcaption {
+	text-align: center;
+	width: 70%;
+	align-self: center;
+}
+
+
+.pic {
+	width: 100%;
+	min-width: 100px;
+	height: 30%;
+	border: solid gray;
+}
+/*Bilder end */
+
+/*Lager mellomrom på listeelementer */
+ul li {
+	margin: 10px 0 0 0;
+}
+
+/* Lager mellomrom i teksten så bildene passer */
+.index-space {
+	margin: 100px 0 0 0;
+}
+
+
+/* Endrer bakgrunnsbilde på header og setter farge */
+header {
+	grid-area: header;
+	color: #0568AB;
+	background-image: url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+/*Overskrift end */
+
+/* Hovedkolonne */
+main {
+	grid-area: main;
+ 	text-align: center;
+ 	display: flex;
+ 	text-align: center;
+}
+/*Hovedkolonne*/
+
+/*============Sidebar============*/
+/*Setter fargen og plassering til sidebar  	*/
+aside {
+	width: 100%;
+	grid-area: sidebar;
+	background-color: #557A95;
+	min-width: 100px;
+	text-align: center;
+}
+
+/* Setter bakgrunnsfargen til sidebar elementer*/
+aside a {
+	background-color: #8a898e;
+	width: 80%;
+	color: #000000;
+	text-decoration: none
+} 
+
+/* Gjør så fargen endrer seg ved hover */
+.space:hover {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+ /* Fikser så sidebar elementene får passe mellomrom*/
+.first-sidebar-link {
+	text-align: center;
+}
+
+
+/* Mellomrom for overskrifter og øvre elemente + sentrerer */
+.space {
+	margin: 20px 0 0 10%; 
+	text-align: center;
+	display: block;
+	border-radius: 8px;
+	font-size: auto;
+}
+/*============sidebar end============*/
+
+/*Footer / Bunnbar */
+footer {
+	grid-area: footer;
+	background-color: #557A95;
+	text-align: center;
+	margin: 0;
+}
+
+
+
+
+
+
